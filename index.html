@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Development Packages</title>
+    <style>
+        :root {
+            --bg-light: #f7f9fc;
+            --bg-dark: #1e1e2f;
+            --text-light: #000;
+            --text-dark: #f1f1f1;
+            --card-light: #fff;
+            --card-dark: #2c2c3e;
+            --accent: #0077b6;
+
+            --startup-color: #575757;
+            --basic-color: #3c91e6;
+            --normal-color: #6bb6df;
+            --high-color: #f8961e;
+            --ultrapro-gradient: linear-gradient(to right, #f9d423, #ff4e50);
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .toggle-container {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .toggle-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            background: #005f8f;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 1000px;
+            background: var(--card-light);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode table {
+            background: var(--card-dark);
+        }
+
+        th,
+        td {
+            padding: 16px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            transition: all 0.3s ease;
+        }
+
+        th {
+            background-color: var(--accent);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+
+        body.dark-mode tr:nth-child(even) {
+            background-color: #2f2f44;
+        }
+
+        .feature {
+            text-align: left;
+            font-weight: 600;
+            background-color: #e0e0e0;
+        }
+
+        body.dark-mode .feature {
+            background-color: #3a3a50;
+        }
+
+        td.yes {
+            color: green;
+            font-weight: bold;
+        }
+
+        td.no {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Column Styling by Package */
+        th:nth-child(2),
+        td:nth-child(2) {
+            color: var(--startup-color);
+        }
+
+        th:nth-child(3),
+        td:nth-child(3) {
+            color: var(--basic-color);
+            font-weight: 500;
+        }
+
+        th:nth-child(4),
+        td:nth-child(4) {
+            color: var(--normal-color);
+            font-weight: 500;
+        }
+
+        th:nth-child(5),
+        td:nth-child(5) {
+            color: var(--high-color);
+            font-weight: 600;
+        }
+
+        th:nth-child(6),
+        td:nth-child(6) {
+            background-image: var(--ultrapro-gradient);
+            color: white;
+            font-weight: 700;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 374px) {
+            table {
+                min-width: 600px;
+                font-size: 12px;
+            }
+
+            .toggle-btn {
+                font-size: 10px;
+                padding: 6px 10px;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (min-width: 375px) and (max-width: 599px) {
+            table {
+                min-width: 700px;
+                font-size: 13px;
+            }
+
+            th,
+            td {
+                padding: 10px;
+            }
+
+            .toggle-btn {
+                font-size: 12px;
+                padding: 8px 12px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (min-width: 600px) and (max-width: 899px) {
+            table {
+                font-size: 14px;
+            }
+
+            .toggle-btn {
+                font-size: 13px;
+                padding: 10px 16px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+        }
+
+        @media screen and (min-width: 900px) and (max-width: 1279px) {
+            table {
+                font-size: 15px;
+            }
+
+            .toggle-btn {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+        @media screen and (min-width: 1280px) and (max-width: 1919px) {
+            table {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+
+        @media screen and (min-width: 1920px) {
+            table {
+                max-width: 1600px;
+                margin: 0 auto;
+                font-size: 17px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="toggle-container">
+        <button class="toggle-btn" onclick="toggleMode()">Toggle Dark Mode</button>
+    </div>
+
+    <h1>Website Development Packages</h1>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature / Package</th>
+                    <th>🚀 Startup<br>PKR 0</th>
+                    <th>🧩 Basic<br>PKR 10,000</th>
+                    <th>📦 Normal<br>PKR 20,000</th>
+                    <th>🚧 High<br>PKR 40,000</th>
+                    <th>🛡️ Ultra Pro<br>PKR 70,000+</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="feature">Pages Included</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>15</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td class="feature">Responsive Design</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                </tr>
+                <tr>
+                    <td class="feature">Contact Form</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                </tr>
+                <tr>
+                    <td class="feature">Basic SEO Setup</td>
+                    <td class="no">No</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                </tr>
+                <tr>
+                    <td class="feature">Admin Dashboard</td>
+                    <td class="no">No</td>
+                    <td class="no">No</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                </tr>
+                <tr>
+                    <td class="feature">E-commerce Functionality</td>
+                    <td class="no">No</td>
+                    <td class="no">No</td>
+                    <td class="no">No</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                </tr>
+                <tr>
+                    <td class="feature">Payment Gateway</td>
+                    <td class="no">No</td>
+                    <td class="no">No</td>
+                    <td class="no">No</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                </tr>
+                <tr>
+                    <td class="feature">Login/Signup System</td>
+                    <td class="no">No</td>
+                    <td class="no">No</td>
+                    <td>Optional</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                </tr>
+                <tr>
+                    <td class="feature">Hosting Support</td>
+                    <td class="no">No</td>
+                    <td>Guide Only</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                </tr>
+                <tr>
+                    <td class="feature">Blog / News Section</td>
+                    <td class="no">No</td>
+                    <td class="no">No</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                </tr>
+                <tr>
+                    <td class="feature">Chat Integration</td>
+                    <td class="no">No</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                </tr>
+                <tr>
+                    <td class="feature">Analytics Integration</td>
+                    <td class="no">No</td>
+                    <td class="no">No</td>
+                    <td>Optional</td>
+                    <td class="yes">Yes</td>
+                    <td class="yes">Yes</td>
+                </tr>
+                <tr>
+                    <td class="feature">Real-time Features</td>
+                    <td class="no">No</td>
+                    <td class="no">No</td>
+                    <td class="no">No</td>
+                    <td class="no">No</td>
+                    <td class="yes">Yes</td>
+                </tr>
+                <tr>
+                    <td class="feature">Maintenance Support</td>
+                    <td class="no">No</td>
+                    <td>3 Days</td>
+                    <td>7 Days</td>
+                    <td>15 Days</td>
+                    <td>30 Days</td>
+                </tr>
+                <tr>
+                    <td class="feature">Delivery Time</td>
+                    <td>2–3 days</td>
+                    <td>4–5 days</td>
+                    <td>7–10 days</td>
+                    <td>10–15 days</td>
+                    <td>2–3 weeks</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+
+</html>
