@@ -185,13 +185,31 @@
                 margin-top: 5px;
             }
         }
+        .rules-cont{
+            text-transform: capitalize;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            font-size: 18px;
+            word-spacing: 3.3px;
+            line-height: 50px;
+            margin-left: 60px;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        .special{
+            font-weight: 600;
+        }
+        .small{
+            text-transform: initial;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Web Development Packages</h1>
-            <p>Choose the perfect solution for your online presence</p>
+            <p>Choose the perfect solution for your online Business</p>
         </header>
         
         <section class="package-section">
@@ -218,7 +236,7 @@
                         <li><span class="feature">Per Page Price</span> <span class="price">$30</span></li>
                         <li><span class="feature">Responsive Design</span> <span class="price">$10</span></li>
                         <li><span class="feature">Additional Designing For Website</span> <span class="price">$20</span></li>
-                        <li><span class="feature">Package Price</span> <span class="price highlight">$330<span></li>
+                        <li><span class="feature">Package Price</span> <span class="price highlight">$320<span></li>
                     </ul>
                 </div>
             </div>
@@ -232,7 +250,7 @@
                         <li><span class="feature">Per Page Price</span> <div class="price">$30</div></li>
                         <li><span class="feature">Responsive Design</span> <span class="price">$30</span></li>
                         <li><span class="feature">Additional Designing For Website</span> <span class="price">$20</span></li>
-                        <li><span class="feature">Package Price</span> <span class="price highlight">$500 <span></li>
+                        <li><span class="feature">Package Price</span> <span class="price highlight">$470 <span></li>
                     </ul>
                 </div>
             </div>
@@ -242,11 +260,11 @@
                 <div class="package-name">Enterprise Package</div>
                 <div class="package-details">
                     <ul>
-                        <li><span class="feature">20 Pages Website</span> <span class="price">$600 - $800</span></li>
+                        <li><span class="feature">20 Pages Website</span> <span class="price">$600</span></li>
                         <li><span class="feature">Per Page Price</span> <span class="price">$30 - $40</span></li>
                         <li><span class="feature">Responsive Design</span> <span class="price">$40</span></li>
                         <li><span class="feature">Additional Designing For Website</span> <span class="price">$20</span></li>
-                        <li><span class="feature">Package Price</span> <span class="price highlight">$660 - $860</span></li>
+                        <li><span class="feature">Package Price</span> <span class="price highlight">$660 </span></li>
                     </ul>
                 </div>
             </div>
@@ -323,7 +341,17 @@
             </div>
         </section>
     </div>
-    
+            <h1 style="text-align: center;margin-bottom:50px;">Guidence For Our Clients <sub>(Must Read)</sub></h1>
+    <ol id="rules-cont" class="rules-cont">
+        <li class="rules" id="rule-1"><span class="special">(Advance Payment)</span> Payment Will Be Taken for The Starting of development process.</li>
+        <li class="rules" id="rule-2"><span class="special">(Development Process)</span> You can check that how much work has beed done on your website also you can check how much progress has beed done.</li>
+        <li class="rules" id="rule-3"><span class="special">(Modifications)</span> Modifications can be added and made during the development process.</li>
+        <li class="rules" id="rule-4"><span class="special">(After the work)</span> when the work is done , you can check all the things on our development tunnels, if you disliked it, then modifications will be made according to your choice. otherwise, hosting process will be started. </li>
+        <li class="rules" id="rule-5"><span class="special">(Refundable)</span> If there occurs some error during development process or you want to stop the development process due to some reason then , your amount will be refunded.</li>
+        <li class="rules" id="rule-6"><span class="special">(Hosting and domain)</span> Hosting and domain Price Is not included in our web packages.</li>
+        <li class="rules" id="rule-7"><span class="special">(delay and discount)</span> if due to some reason the development process is delayed or it takes more time than the given one , discount of 5$ will be given on per page price.</li>
+        <li class="rules" id="rule-8"><span class="special">(other stylings)</span> if you want to add other special stylings to your website , after or during the development process, then it will cost seperately. <span class="small special">e.g</span> your own logos designing etc.</li>
+    </ol>
     <script>
         function calculateVPS() {
             const planPrice = parseInt(document.getElementById('vps-plan').value);
